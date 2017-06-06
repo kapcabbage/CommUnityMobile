@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Add the xmlns:fresh line and use it to resolve the fresh:FreshBaseContentPage declaration -->
+<fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                            x:Class="FreshWithSQLite.Pages.CreateMessagePage"
+                            xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite"
+                             NavigationPage.HasBackButton="False">
+  <ContentPage.Content>
+    <StackLayout Padding="20">
+      <StackLayout  Orientation="Vertical">
+        <Label Text="Your message:" TextColor="#99aab5"/>
+        <Editor Text="{Binding MessageText}" HeightRequest="100" TextColor="#99aab5"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Button Text="Send" HorizontalOptions="CenterAndExpand"  Command="{Binding SaveCommand}"/>
+      </StackLayout>
+    </StackLayout>
+  </ContentPage.Content>
+</fresh:FreshBaseContentPage>

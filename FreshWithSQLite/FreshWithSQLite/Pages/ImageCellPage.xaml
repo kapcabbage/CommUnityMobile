@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListView xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		x:Class="FreshWithSQLite.Pages.ImageCellPage">
+
+ RowHeight="42">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="20, 0, 0, 0" Spacing="20" BackgroundColor="#222">
+              <Image Source ="{Binding ListViewIconSource}" WidthRequest="35" HeightRequest="35"  VerticalOptions="Center"></Image>
+              <Label Text="{Binding ListViewText}" Font="Bold, Large" VerticalOptions="Center" TextColor="White"></Label>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
