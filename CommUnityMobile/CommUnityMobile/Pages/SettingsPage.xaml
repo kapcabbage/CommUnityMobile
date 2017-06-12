@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FreshWithSQLite.Pages.SettingsPage"
+             xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite"
+                             xmlns:customControls="clr-namespace:FreshWithSQLite.CustomControls;assembly=FreshWithSQLite"
+                            xmlns:markupExtensions="clr-namespace:FreshWithSQLite.MarkupExtensions;assembly=FreshWithSQLite">
+
+  <ContentPage.Content>
+    <AbsoluteLayout >
+      <StackLayout Padding="20" BackgroundColor="#36393e"  AbsoluteLayout.LayoutFlags="All"
+                      AbsoluteLayout.LayoutBounds="0,1,1,1">
+        <StackLayout  Orientation="Vertical">
+          <Label Text="Select Channel" FontAttributes="Bold" FontSize="15"
+            TextColor="#99aab5" HorizontalTextAlignment="Start" Margin="20"/>
+          <Picker x:Name="channelPicker" Title="Channels" SelectedIndex="{Binding Channel}" HorizontalOptions="FillAndExpand" TextColor="#99aab5">
+            <Picker.Items>
+              <x:String>przywitaj_sie</x:String>
+              <x:String>ogloszenia</x:String>
+            </Picker.Items>
+          </Picker>
+        </StackLayout>
+        <StackLayout Orientation="Vertical">
+          <Label Text="Welcome text" FontAttributes="Bold" FontSize="15"
+           TextColor="#99aab5" HorizontalTextAlignment="Start" Margin="20"/>
+          <Entry x:Name="welcomeText" Text="{Binding WelcomeMessage}" Margin="5" TextColor="#99aab5"></Entry>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Welcome text on/off" FontAttributes="Bold" FontSize="13"
+           TextColor="#99aab5" HorizontalTextAlignment="Center" Margin="20"/>
+          <Switch IsToggled="{Binding isOn}" HorizontalOptions="EndAndExpand" />
+        </StackLayout>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal" AbsoluteLayout.LayoutFlags="PositionProportional"
+                                           AbsoluteLayout.LayoutBounds="1.0,1.0,-1,-1">
+        <customControls:ImageButton          Source="{markupExtensions:PlatformImage SourceImage='IconFABDone'}"
+                                           Command="{Binding SaveCommand}"
+                                          
+                                           Margin="10" />
+        <customControls:ImageButton          Source="{markupExtensions:PlatformImage SourceImage='IconFAB'}"
+                                            Command="{Binding AddCommand}"
+                                            Margin="10" />
+      </StackLayout>
+      
+    </AbsoluteLayout>
+  </ContentPage.Content>
+</fresh:FreshBaseContentPage>

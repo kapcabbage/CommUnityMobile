@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FreshWithSQLite.Pages.LoginPage"
+             xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite"
+                            xmlns:markupExtensions="clr-namespace:FreshWithSQLite.MarkupExtensions;assembly=FreshWithSQLite">
+  <ContentPage.Content>
+    <StackLayout Padding="20" VerticalOptions="Center" BackgroundColor="#2f2f2f">
+      <StackLayout  Orientation="Vertical">
+        <Image Source="{markupExtensions:PlatformImage SourceImage='discord'}"
+              Scale="0.7"/>
+        <Button Text="Login with Facebook" HorizontalOptions="Center" VerticalOptions="Center" Command="{Binding LoginFacebook}" BackgroundColor="#3b5998" TextColor="#ffffff"/>
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+
+      </StackLayout>
+    </StackLayout>
+
+  </ContentPage.Content>
+
+</fresh:FreshBaseContentPage>

@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfAutoComplete.XForms</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete">
+            <summary>
+            SfAutoComplete�control allows the user
+            to enter text in an application. This control has additional functionality that
+            is not found in the entry control, including Watermark
+            and AutoComplete support.
+            </summary>
+            <remarks>
+            The SfAutoComplete is inherited from <see
+            cref="T:Xamarin.Forms.View"/>
+            </remarks>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SuggestionPredicate`1">
+            <summary>
+            Suggestion predicate.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.Filter">
+            <summary>
+            Returns a SuggestionPredicate on filtering
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.ValueChangedEventHandler">
+            <summary>
+            Handles the ValueChanged event
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.ValueChanged">
+            <summary>
+            Occurs when <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> Value is changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.RaiseValueChanged(Syncfusion.SfAutoComplete.XForms.ValueChangedEventArgs)">
+            <summary>
+            Raises the value changed.
+            </summary>
+            <param name="args">Arguments.</param>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DrawCellEventHandler">
+            <summary>
+            Handles the DrawCell event
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DrawCell">
+            <summary>
+            Occurs when the cell is drawn.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.RaiseDrawCell(Syncfusion.SfAutoComplete.XForms.DrawCellEventArgs)">
+            <summary>
+            Raises the draw cell.
+            </summary>
+            <param name="args">Arguments.</param>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SelectionChangedEventHandler">
+            <summary>
+            Handles the SelectionChanged event
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="E:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SelectionChanged">
+            <summary>
+            Occurs when selection is changed in <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/>
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.RaiseSelectionChanged(Syncfusion.SfAutoComplete.XForms.SelectionChangedEventArgs)">
+            <summary>
+            Raises the selection changed.
+            </summary>
+            <param name="args">Arguments.</param>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.AutoCompleteMode">
+            <summary>
+            Gets or sets <see
+            cref="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.AutoCompleteMode"/>�that
+            display the�Suggestions in several ways.
+            </summary>
+            <value>
+            The default value is <see
+            cref="F:Syncfusion.SfAutoComplete.XForms.AutoCompleteMode.Suggest"/>.
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.AutoCompleteModeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for AutoCompleteMode property. 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SuggestionMode">
+            <summary>
+            Gets or sets the <see
+            cref="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SuggestionMode"/>�to filter the Suggestions.
+            </summary>
+            <value>The default value is <see
+            cref="F:Syncfusion.SfAutoComplete.XForms.SuggestionMode.StartsWith"/>.
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SuggestionModeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SuggestionMode property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SuggestionBoxPlacement">
+            <summary>
+            Gets or sets the <see
+            cref="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SuggestionBoxPlacement"/>�to postion the suggestions box.
+            </summary>
+            <value> The default value is <see
+            cref="F:Syncfusion.SfAutoComplete.XForms.SuggestionBoxPlacement.Bottom"/>.
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SuggestionBoxPlacementProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SuggestionBoxPlacement property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.Watermark">
+            <summary>
+            Gets or sets the content which is displayed as a watermark in the <see
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> when it is empty.
+            </summary>
+            <value> The default value is string.Empty.
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.WatermarkProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Watermark property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.MinimumPrefixCharacters">
+            <summary>
+            Gets or sets the minimum number of characters to be typed for the suggestion box to open.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.MinimumPrefixCharactersProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for MinimumPrefixCharacters property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.ShowSuggestionsOnFocus">
+            <summary>
+            Gets or sets a value indicating whether the complete suggestion list should be displayed when an empty <see
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> is focused.
+            </summary>
+            <value>The default value is false</value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.ShowSuggestionsOnFocusProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ShowSuggestionsOnFocus property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownItemHeight">
+            <summary>
+            Gets or sets the height of <see
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> suggestion box.
+            </summary>
+            <value>The default value is 30</value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownItemHeightProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for DropDownItemHeight property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.Text">
+            <summary>
+            Gets or sets the text of <see
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>The default value is string.Empty</value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.TextProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for Text property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.MaximumDropDownHeight">
+            <summary>
+            Gets or sets the maximum height of suggestion box in <see
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>The default value is 400</value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.MaximumDropDownHeightProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for MaximumDropDownHeight property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownTextSize">
+            <summary>
+            Gets or sets the text size of suggestion list items.
+            </summary>
+            <value>The default value is 18</value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownTextSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for DropDownTextSize property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.TextSize">
+            <summary>
+            Gets or sets the text size of <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>The default value is 18</value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.TextSizeProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for TextSize property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.PopupDelay">
+            <summary>
+            Gets or sets the delay in milliseconds to open the suggestion popup.
+            </summary>
+            <value>The default value is 100 milliseconds</value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.PopupDelayProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for PopupDelay property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.TextColor">
+            <summary>
+            Gets or sets the color of text in <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>The default value is Black</value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.TextColorProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for TextColor property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.WatermarkColor">
+            <summary>
+            Gets or sets the color of <see 
+            cref="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.Watermark"/> text in <see 
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>The default value is Gray</value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.WatermarkColorProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for WatermarkColor property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.BorderColor">
+            <summary>
+            Gets or sets the color of border in <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.BorderColorProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for BorderColor property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.AutoCompleteSource">
+            <summary>
+            Gets or sets the source of <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>	
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.AutoCompleteSourceProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for AutoCompleteSource property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.ItemTemplate">
+            <summary>
+            Gets or sets the�<see cref="T:Xamarin.Forms.DataTemplate"/> which applies
+            to the suggestion items in <see
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.ItemTemplateProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ItemTemplate property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownTextColor">
+            <summary>
+            Gets or sets the text color of suggestion items.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownTextColorProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for DropDownTextColor property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DisplayMemberPath">
+            <summary>
+            Gets or sets the display member path which is used to search the suggestions.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DisplayMemberPathProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for DisplayMemberPath property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SelectedValuePath">
+            <summary>
+            Gets or sets the selected value path using which <see 
+            cref="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SelectedValue"/> is set in <see
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SelectedValuePathProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SelectedValuePath property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SelectedValue">
+            <summary>
+            Gets the selected value of <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SelectedValueProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SelectedValue property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SelectedIndex">
+            <summary>
+            Gets the selected index of <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>
+            The default value is -1.
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.SelectedIndexProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for SelectedIndex property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DataSource">
+            <summary>
+            Gets or sets the DataSource of <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DataSourceProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for DataSource property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownFontAttributes">
+            <summary>
+            Gets or sets the font attributes of suggestion box item <see 
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> in control.
+            </summary>
+            <value>
+            The default value is <see cref="F:Xamarin.Forms.FontAttributes.None"/> 
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownFontAttributesProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for DropDownFontAttributes property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownItemFontAttributes">
+            <summary>
+            Gets or sets the font attributes of suggestion box item <see 
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> in control.
+            </summary>
+            <value>
+            The default value is <see cref="F:Xamarin.Forms.FontAttributes.None"/> 
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownItemFontAttributesProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for DropDownFontAttributes property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.FontAttributes">
+            <summary>
+            Gets or sets the font attributes for the text in <see 
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>
+            The default value is <see cref="F:Xamarin.Forms.FontAttributes.None"/> 
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.FontAttributesProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontAttributes property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.FontFamily">
+            <summary>
+            Gets or sets the font family for the text in <see 
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>
+            The default value is <see cref="F:Xamarin.Forms.FontAttributes.None"/> 
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.FontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for FontFamily property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownItemFontFamily">
+            <summary>
+            Gets or sets the font family of suggestion box item <see 
+            cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> in control.
+            </summary>
+            <value>
+            The default value is <see cref="F:Xamarin.Forms.FontAttributes.None"/> 
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.DropDownItemFontFamilyProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for DropDownItemFontFamily property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.ItemsSource">
+            <summary>
+            Gets or sets the ItemsSource of <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+            <value>
+            The default value is null.
+            </value>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.ItemsSourceProperty">
+            <summary>
+            Using a DependencyProperty as the backing store for ItemsSource property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.ValueChangedEventArgs">
+            <summary>
+            Represents the Arguments for <see 
+            cref="T:Syncfusion.SfAutoComplete.XForms.ValueChangedEventArgs"/>
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.ValueChangedEventArgs.Value">
+            <summary>
+            Gets the <see cref="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.Text"/>
+            of <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.SelectionChangedEventArgs">
+            <summary>
+            Represents the Arguments for <see 
+            cref="T:Syncfusion.SfAutoComplete.XForms.SelectionChangedEventArgs"/>
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.SelectionChangedEventArgs.Value">
+            <summary>
+            Gets the <see cref="P:Syncfusion.SfAutoComplete.XForms.SfAutoComplete.Text"/>
+            of <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.DrawCellEventArgs">
+            <summary>
+            Represents the Arguments for <see 
+            cref="T:Syncfusion.SfAutoComplete.XForms.DrawCellEventArgs"/>
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.DrawCellEventArgs.AutoComplete">
+            <summary>
+            Gets the <see cref="T:Syncfusion.SfAutoComplete.XForms.SfAutoComplete"/> control.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.DrawCellEventArgs.Item">
+            <summary>
+            Gets the item.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfAutoComplete.XForms.DrawCellEventArgs.View">
+            <summary>
+            Gets or sets the <see cref="T:Xamarin.Forms.View"/> control.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.AutoCompleteMode">
+            <summary>
+             AutoComplete Mode is used to decide the suggestion pattern for displaying the filtered data according to the text entered.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.AutoCompleteMode.Append">
+            <summary>
+            Appends the first matching string with the entered character.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.AutoCompleteMode.Suggest">
+            <summary>
+            Displays the suggestion in the dropdown.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.AutoCompleteMode.SuggestAppend">
+            <summary>
+            Displays the suggestion in the dropdown along with appending the first matching string.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.SuggestionBoxPlacement">
+            <summary>
+             SuggestionBoxPlacement is used to display the suggestionbox in the desired position.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SuggestionBoxPlacement.Bottom">
+            <summary>
+            Displays the suggestion box at the Bottom.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SuggestionBoxPlacement.Top">
+            <summary>
+            Displays the suggestion box at the Top.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfAutoComplete.XForms.SuggestionMode">
+            <summary>
+             Suggestion Mode is used to decide the filtered data to be displayed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SuggestionMode.StartsWith">
+            <summary>
+            Display the list of suggestions based on starting letter.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SuggestionMode.StartsWithCaseSensitive">
+            <summary>
+            Display the list of suggestions based on starting letter with case sensitive.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SuggestionMode.Contains">
+            <summary>
+            Display the list of suggestions, if autocomplete list contains that words.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SuggestionMode.ContainsWithCaseSensitive">
+            <summary>
+            Display the list of suggestions, if autoComplete list contains that words with case sensitive.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SuggestionMode.Equals">
+            <summary>
+            Displays the word that matches.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SuggestionMode.EqualsWithCaseSensitive">
+            <summary>
+            Displays the word that matches with case sensitive.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SuggestionMode.EndsWith">
+            <summary>
+            Display the list of suggestions based on ending word.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfAutoComplete.XForms.SuggestionMode.EndsWithCaseSensitive">
+            <summary>
+            Display the list of suggestions based on the ending word with case sensitive.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1834 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfDiagram.iOS</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfDiagram.iOS.Connector">
+            <summary>
+            Connector.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Connector.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SfDiagram.Connector"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Connector.#ctor(Syncfusion.SfDiagram.iOS.Node,Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SfDiagram.Connector"/> class.
+            </summary>
+            <param name="sourcenode">Source Node of the connector</param>, <param name="targetnode"> Target Node of the connector</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Connector.#ctor(CoreGraphics.CGPoint,CoreGraphics.CGPoint)">
+            <summary>
+            Initializes a new instance of the <see cref="T:SfDiagram.Connector"/> class.
+            </summary>
+            <param name="sourcepoint">Source Point of the connector</param>, <param name="targetpoint">Target Point</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.SourceNode">
+            <summary>
+            Gets or sets the source node from which the connector starts.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.TargetNode">
+            <summary>
+            Gets or sets the target node where the connector ends.
+            </summary>
+            <value>The target node.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.SourceNodeName">
+            <summary>
+            Gets or sets the source node from name.
+            </summary>
+            <value>The name of the source node.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.TargetNodeName">
+            <summary>
+            Gets or sets the target node from name.
+            </summary>
+            <value>The name of the target node.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.SourcePoint">
+            <summary>
+            Gets or sets the source point from which the connector starts.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.TargetPoint">
+            <summary>
+            Gets or sets the target point where the connector ends.
+            </summary>
+            <value>The target point.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.SourcePort">
+            <summary>
+            Gets or sets the source port from which the connector starts.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.TargetPort">
+            <summary>
+            Gets or sets the target port where the connector ends.
+            </summary>
+            <value>The target port.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.InternalSourcePoint">
+            <summary>
+            Gets or sets the target point where the connector ends.
+            </summary>
+            <value>The target point.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.InternalTargetPoint">
+            <summary>
+            Gets or sets the target point where the connector ends.
+            </summary>
+            <value>The target point.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.SegmentType">
+            <summary>
+            Gets or sets the type of the segment.
+            </summary>
+            <value>The type of the segment.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.TargetDecorator">
+            <summary>
+            Gets or sets the tail decorator.
+            </summary>
+            <value>The tail decorator.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.SourceDecorator">
+            <summary>
+            Gets or sets the head decorator.
+            </summary>
+            <value>The head decorator.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Connector.Annotations">
+            <summary>
+            Gets or sets the annotations.
+            </summary>
+            <value>The annotations.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.Diagram">
+            <summary>
+            Diagram class derived from uiview
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Diagram.#ctor(UIKit.UIView,Syncfusion.SfDiagram.iOS.SfDiagram)">
+             <summary>
+             Initializes a new instance of the <see cref="T:SfDiagram.Diagram"/> class.
+             </summary>
+             <param name="ParentLayer">The View to which the Diagram control should be added.</param>
+            <param name="parent">Parent of the diagram view</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Diagram.AddNode(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Adds the node.
+            </summary>
+            <returns>The node.</returns>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Diagram.AddNodePort(Syncfusion.SfDiagram.iOS.Node,Syncfusion.SfDiagram.iOS.Port)">
+            <summary>
+            Add port to the Node
+            </summary>
+            <param name="node"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Diagram.RemoveNode(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Removes the node.
+            </summary>
+            <returns>The node.</returns>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Diagram.RemoveNodePort(Syncfusion.SfDiagram.iOS.Node,Syncfusion.SfDiagram.iOS.Port)">
+            <summary>
+            Removes port from the Node.
+            </summary>
+            <param name="node"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Diagram.AddConnector(Syncfusion.SfDiagram.iOS.Connector)">
+            <summary>
+            Adds the <see cref="T:SfDiagram.Connector"/> to the <see cref="T:SfDiagram.Diagram"/> control.
+            </summary>
+            <param name="connector">The instance of <see cref="T:SfDiagram.Connector"/> to be added to the <see cref="T:SfDiagram.Diagram"/> control.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Diagram.RemoveConnector(Syncfusion.SfDiagram.iOS.Connector)">
+            <summary>
+            Removes the connector.
+            </summary>
+            <returns>The connector.</returns>
+            <param name="connector">Connector.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Diagram.LayoutSubviews">
+            <summary>
+            Layouts the subviews.
+            </summary>
+            <returns>The subviews.</returns>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.ShapeType">
+            <summary>
+            Shape types.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Default">
+            <summary>
+            The rectangle shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Rectangle">
+            <summary>
+            The rectangle shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.RoundedRectangle">
+            <summary>
+            The rectangle with the rounded corners.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Ellipse">
+            <summary>
+            The ellipse shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Circle">
+            <summary>
+            The circle shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Star">
+            <summary>
+            The star shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Pentagon">
+            <summary>
+            The pentagon shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Hexagon">
+            <summary>
+            The Hexagon shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Triangle">
+            <summary>
+            The Triangle shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.RightAngleTriangle">
+            <summary>
+            The RightAngled Triangle shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Diamond">
+            <summary>
+            The Diamond shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Parallelogram">
+            <summary>
+            The Parallelogram shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Trapezoid">
+            <summary>
+            The Trapezoid shape
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Plus">
+            <summary>
+            The Plus shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Octagon">
+            <summary>
+            The Octagon shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Heptagon">
+            <summary>
+            The Heptagon shape.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ShapeType.Decagon">
+            <summary>
+            The Decagon shape.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.HorizontalAlignment">
+            <summary>
+            Specifies how an object or text in a control is horizontally aligned relative to an element of the control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.HorizontalAlignment.Center">
+            <summary>		
+            The object or text is aligned in the centre of the control element.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.HorizontalAlignment.Left">
+            <summary>
+            The object or text is aligned on the left of the control element.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.HorizontalAlignment.Right">
+            <summary>
+            The object or text is aligned on the right of the control element.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.VerticalAlignment">
+            <summary>
+            Specifies how an object or text in a control is vertically aligned relative to an element of the control.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.VerticalAlignment.Center">
+            <summary>
+            The object or text is aligned in the center of the control element.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.VerticalAlignment.Top">
+            <summary>
+            The object or text is aligned on the top of the control element.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.VerticalAlignment.Bottom">
+            <summary>
+            The object or text is aligned on the bottom of the control element.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.StrokeStyle">
+            <summary>
+            Stroke style.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.StrokeStyle.Default">
+            <summary>
+            The default stroke style.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.StrokeStyle.Dashed">
+            <summary>
+            Stroke style Dashed.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.StrokeStyle.Dotted">
+            <summary>
+            Stroke style Dotted.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.FillStyle">
+            <summary>
+            Fill style.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.FillStyle.Solid">
+            <summary>
+            The solid Gradient effect.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.FillStyle.Gradient">
+            <summary>
+            The Gradient effect.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.SegmentType">
+            <summary>
+            Segment type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.SegmentType.OrthoSegment">
+            <summary>
+            Segment type OrthoSegment.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.SegmentType.StraightSegment">
+            <summary>
+            Segment type Straight.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.Orientation">
+            <summary>
+            Orientation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.Orientation.Horizontal">
+            <summary>
+            Control or layout should be horizontally oriented..
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.Orientation.Vertical">
+            <summary>
+            Control or layout should be vertically oriented..
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.TreeOrientation">
+            <summary>
+            Initialize enum class TreeOrientation
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.TreeOrientation.LeftToRight">
+            <summary>
+            Enable or Disable Left to Right behavior
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.TreeOrientation.RightToLeft">
+            <summary>
+            Enable or Disable Right to Left behavior
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.TreeOrientation.TopToBottom">
+            <summary>
+            Enable or Disable Top to Bottom behavior
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.TreeOrientation.BottomToTop">
+            <summary>
+            Enable or Disable Bottom to Top behavior
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.ChartType">
+            <summary>
+            Chart type.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ChartType.Left">
+            <summary>
+            Enable or Disable Left behavior
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ChartType.Right">
+            <summary>
+            Enable or Disable Right behavior
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ChartType.Alternate">
+            <summary>
+            Enable or Disable Alternate behavior
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.ChartType.Center">
+            <summary>
+            Enable or Disable Center behavior
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.Decorator">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.Decorator.None">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.Decorator.Filled45Arrow">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.Decorator.Circle">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.Decorator.Diamond">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.Decorator.Square">
+            <summary>
+            Decorator.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.Direction">
+            <summary>
+            Direction
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.PatternType">
+            <summary>
+            PatternType
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.OrthogonalDirection">
+            <summary>
+            OrthogonalDirection
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.OrthogonalDirection.Auto">
+            <summary>
+            Angle is chosen internally
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.OrthogonalDirection.Left">
+            <summary>
+            Absolute angle: 180 Degree
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.OrthogonalDirection.Top">
+            <summary>
+            Absolute angle: 270 Degree or -90 Degree
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.OrthogonalDirection.Right">
+            <summary>
+            Absolute angle: 0 degree
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.OrthogonalDirection.Bottom">
+            <summary>
+            Absolute angle: 90 degree
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.OrthogonalDirection.Straight">
+            <summary>
+            Relative Angle: 0 degree
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.OrthogonalDirection.ClockWise90">
+            <summary>
+            Relative Angle: 90 degree
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.OrthogonalDirection.Opposite">
+            <summary>
+            Relative Angle: 180 degree
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.OrthogonalDirection.AntiClockWise90">
+            <summary>
+            Relative Angle: 270 degree or -90 degree
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.ArrowDirection">
+            <summary>
+            ArrowDirection
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.DirectedTreeLayout">
+            <summary>
+            DirectedTree Layout class
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DirectedTreeLayout.TreeOrientation">
+            <summary>
+            Gets or sets Orientation
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DirectedTreeLayout.Type">
+            <summary>
+            Gets or sets Type
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DirectedTreeLayout.LayoutRoot">
+            <summary>
+            Gets or sets LayoutRoot
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.DirectedTreeLayout.#ctor">
+            <summary>
+            Initializes a new instance of the DirectedTreeLayout class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.DirectedTreeLayout.UpdateLayout">
+            <summary>
+            Oveeride UpdateLayout method from its base class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.DirectedTreeLayout.ArrangeChildren(System.Object,System.Collections.Generic.IEnumerable{Syncfusion.SfDiagram.iOS.Node})">
+            <summary>
+            Determine the order of Node's neighbor, during automatic layout.
+            </summary>
+            <param name="parent"></param>
+            <param name="children"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.DirectedTreeLayout.UpdateLayout(System.Object)">
+            <summary>
+            Oveeride UpdateLayout method from its base class
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.LayoutType">
+            <summary>
+            Initialize enum class LayoutType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.LayoutType.Hierarchical">
+            <summary>
+            Enable or Disable Hierarchical behavior
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.LayoutType.Organization">
+            <summary>
+            Enable or Disable Organization behavior
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.TreeLayoutBase">
+             <summary>
+            TreeLayout base class
+             </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.TreeLayoutBase.LayoutRoot">
+            <summary>
+            Gets or sets abstract object LayoutRoot
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.TreeLayoutBase.HorizontalSpacing">
+            <summary>
+            Gets or sets HorizontalSpacing
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.TreeLayoutBase.VerticalSpacing">
+            <summary>
+            Gets or sets VerticalSpacing
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.LayoutBase">
+            <summary>
+            Layout Base class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.LayoutBase.UpdateLayout">
+            <summary>
+            Initialize Abstract method UpdateLayout
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.LayoutBase.UpdateLayout(System.Object)">
+            <summary>
+            Initialize Abstract method UpdateLayout with parameter
+            </summary>
+            <param name="fixedNode"></param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.LayoutBase.Margin">
+            <summary>
+            Gets or sets Margin
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.ILayout">
+            <summary>
+            Interface for Layout 
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.ILayout.UpdateLayout">
+            <summary>
+            Initialize UpdateLayout method
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.LayoutManager">
+            <summary>
+            Create class LayoutManager
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.LayoutManager.Diagram">
+            <summary>
+            Gets or sets Diagram
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.LayoutManager.Layout">
+            <summary>
+            Gets or sets Layout
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.LayoutManager.OnLayoutChanged(Syncfusion.SfDiagram.iOS.LayoutBase,Syncfusion.SfDiagram.iOS.LayoutBase)">
+            <summary>
+            Set virtual method to change property of LayoutManager
+            </summary>
+            <param name="oldValue"></param>
+            <param name="newValue"></param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.Node">
+            <summary>
+            Node.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Node.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:SfDiagram.Node"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Node.Ports_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Portses the collection changed.
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="e">E.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Node.Leaves_CollectionChanged(System.Object,System.Collections.Specialized.NotifyCollectionChangedEventArgs)">
+            <summary>
+            Leaveses the collection changed.
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="e">E.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Content">
+            <summary>
+            Gets or sets the content of the node.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Template">
+            <summary>
+            Gets or sets the template.
+            </summary>
+            <value>The template.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.BoundingRect">
+            <summary>
+            Gets or sets the bounding rectangle.
+            </summary>
+            <value>The bound rectangle.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Width">
+            <summary>
+            Gets or sets the width.
+            </summary>
+            <value>The width.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Height">
+            <summary>
+            Gets or sets the height.
+            </summary>
+            <value>The height.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.OffsetX">
+            <summary>
+            Gets or sets the offset x.
+            </summary>
+            <value>The offset x.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.OffsetY">
+            <summary>
+            Gets or sets the offset y.
+            </summary>
+            <value>The offset y.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InternalBoundingRect">
+            <summary>
+            Gets or sets the internal bounding rect.
+            </summary>
+            <value>The internal bounding rect.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Pivot">
+            <summary>
+            Gets or sets the Pivot.
+            </summary>
+            <value>The Pivot.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.RotationAngle">
+            <summary>
+            Gets or sets the rotation angle.
+            </summary>
+            <value>The rotation angle.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.ShapeType">
+            <summary>
+            Gets or sets the type of the shape.
+            </summary>
+            <value>The type of the shape.</value>
+            
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Annotations">
+            <summary>
+            Gets or sets the annotation.
+            </summary>
+            <value>The annotation.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.CornerRadius">
+            <summary>
+            Gets or sets the corner radius. 
+            Applies only for Shape - Rounded Rectangle
+            </summary>
+            <value>The corner radius.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Ports">
+            <summary>
+            Gets or sets the ports.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Name">
+            <summary>
+            Gets or sets the name of the node.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Children">
+            <summary>
+            Gets the children.
+            </summary>
+            <value>The children.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Neighbors">
+            <summary>
+            Get the Neighbour element
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InNeighbors">
+            <summary>
+            Get the InNeighbour element
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.OutNeighbors">
+            <summary>
+            Get the OutNeighbour element
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InOutConnectors">
+            <summary>
+            In and Out Connectors
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InConnectors">
+            <summary>
+            InConnectors
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.OutConnectors">
+            <summary>
+            OutConnectors
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InternalInOutConnectors">
+            <summary>
+            In and Out Connectors
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InternalInConnectors">
+            <summary>
+            InConnectors
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InternalOutConnectors">
+            <summary>
+            OutConnectors
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InternalChildren">
+            <summary>
+            Node children
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InternalNeighbors">
+            <summary>
+            Get the neighbour element
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InternalInNeighbors">
+            <summary>
+            Get the Internal InNeighbour element
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.InternalOutNeighbors">
+            <summary>
+            Get the Internal OutNeighbour element
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Node.InializeRelationship">
+            <summary>
+            To initialize the Node/Connector relationship.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Corners">
+            <summary>
+            Gets or set the coners of the Node
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Center">
+            <summary>
+            Gets or set the Center
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.Leaves">
+            <summary>
+            Gets or sets the leaves.
+            </summary>
+            <value>The leaves.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.IsExpanded">
+            <summary>
+            Gets or sets the node expand state if the node has childrens.
+            </summary>
+            <value>The expand.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Node.CustomShape">
+            <summary>
+            Gets or sets the custom path to be rendered as node.
+            </summary>
+            <value>The custom path.</value>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Node.Expanded(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Expanded the specified node.
+            </summary>
+            <returns>The expanded.</returns>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Node.Collapse(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Collapse the specified node.
+            </summary>
+            <returns>The collapse.</returns>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Node.GetIntersection(System.Drawing.Point,System.Boolean)">
+            <summary>
+            Gets the intersection.
+            </summary>
+            <returns>The intersection.</returns>
+            <param name="point">Point.</param>
+            <param name="isDock">If set to <c>true</c> is dock.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Node.GetDirection(System.Drawing.Point)">
+            <summary>
+            Get the connector direction of Node.
+            </summary>
+            <param name="port"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.BeginNodeRenderEventHandler">
+            <summary>
+            BeginNodeRenderEventHandler
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.BeginNodeLayoutEventHandler">
+            <summary>
+            LayoutInfoHandler
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.NodeClickEventHandler">
+            <summary>
+            Node click event handler.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.ConnectorClickEventHandler">
+            <summary>
+            Connector click event handler.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.SfDiagram">
+            <summary>
+            Sfdiagram.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.iOS.SfDiagram.BeginNodeRender">
+            <summary>
+            Occurs when property changed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.iOS.SfDiagram.BeginNodeLayout">
+            <summary>
+            Occurs when Layoutinfo changed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.iOS.SfDiagram.NodeClicked">
+            <summary>
+            Occurs when node clicked.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfDiagram.iOS.SfDiagram.ConnectorClicked">
+            <summary>
+            Occurs when connector clicked.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.iOS.SfDiagram"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.SfDiagram.Nodes">
+            <summary> 			 
+            Sets the Nodecollection of the SfDiagram.	
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.SfDiagram.Connectors">
+            <summary>
+            Gets the connector collection from diagram.
+            </summary>
+            <value>The connectors.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.SfDiagram.LayoutManager">
+            <summary> 			 
+            Sets the LayoutManager of the SfDiagram.	
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.OnLayoutManagerChanged">
+            <summary>
+            Ons the layout manager changed.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.SfDiagram.DataSourceSettings">
+            <summary> 			 
+            Sets the DataSourceSettings of the SfDiagram.	
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.OnBeginNodeRenderChanged(System.Object,Syncfusion.SfDiagram.iOS.BeginNodeRenderEventArgs)">
+            <summary>
+            Occurs when property changed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.OnBeginNodeLayout(System.Object,Syncfusion.SfDiagram.iOS.BeginNodeLayoutEventArgs)">
+            <summary>
+            Occurs when property changed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.OnNodeClicked(System.Object,Syncfusion.SfDiagram.iOS.NodeClickedEventArgs)">
+            <summary>
+            Ons the node clicked.
+            </summary>
+            <param name="sender">Sender.</param>
+            <param name="e">E.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.SfDiagram.Margin">
+            <summary>
+            Gets or sets the margin for diagram.
+            </summary>
+            <value>The margin.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.SfDiagram.BackgroundColor">
+            <summary>
+            Gets or sets the color of the background of diagram.
+            </summary>
+            <value>The color of the background.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.SfDiagram.Frame">
+            <summary>
+            Gets or set the frame
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.AddNode(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Add the Node to the diagram view
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.AddNodePort(Syncfusion.SfDiagram.iOS.Node,Syncfusion.SfDiagram.iOS.Port)">
+            <summary>
+            Add port to the Node
+            </summary>
+            <param name="node"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.RemoveNodePort(Syncfusion.SfDiagram.iOS.Node,Syncfusion.SfDiagram.iOS.Port)">
+            <summary>
+            Removes port from the Node.
+            </summary>
+            <param name="node"></param>
+            <param name="port"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.RemoveNode(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Removes the node.
+            </summary>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.AddConnector(Syncfusion.SfDiagram.iOS.Connector)">
+            <summary>
+            Add the Connector to the diagram view
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.RemoveConnector(Syncfusion.SfDiagram.iOS.Connector)">
+            <summary>
+            Remove the Connector from the diagram view
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.Collapse(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Collapse the specified node.
+            </summary>
+            <returns>The collapse.</returns>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.Clear">
+            <summary>
+            Clears NodeCollection and Connector Collection from Diagram
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.Load(System.String)">
+            <summary>
+            Load the specified JsonFileLocation.
+            </summary>
+            <param name="JsonFileLocation">Json file location.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.AddToView(UIKit.UIView)">
+            <summary>
+            Adds Diagram to the Parent View
+            </summary>
+            <param name="Parent"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.UpdateNodeProperty(Syncfusion.SfDiagram.iOS.Node,System.String)">
+            <summary>
+            update node property at run time
+            </summary>
+            <param name="node"></param>
+            <param name="PropertyName"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.UpdateNodePortProperty(Syncfusion.SfDiagram.iOS.Port,Syncfusion.SfDiagram.iOS.Node,System.String)">
+            <summary>
+            update NodePort property at run time
+            </summary>
+            <param name="port"></param>
+            <param name="node"></param>
+            <param name="PropertyName"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.CheckConnectorUpdate(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Check the connector points
+            </summary>
+            <param name="temp"></param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagram.UpdateConnectorProperty(Syncfusion.SfDiagram.iOS.DiagramBaseItem)">
+            <summary>
+            Update the Connector property at run time
+            </summary>
+            <param name="connector"></param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.SfDiagram.Height">
+            <summary>
+            Gets or set the height
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.SfDiagram.Width">
+            <summary>
+            Gets or set the Width
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.SfDiagram.NodeTemplate">
+            <summary>
+            Gets or sets the node template.
+            </summary>
+            <value>The node template.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.ConnectorClickedEventArgs">
+            <summary>
+            Connector clicked event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.ConnectorClickedEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.iOS.ConnectorClickedEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.NodeClickedEventArgs">
+            <summary>
+            Node clicked event arguments.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.NodeClickedEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.iOS.NodeClickedEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.SfDiagramScrollView.#ctor(UIKit.UIView,Syncfusion.SfDiagram.iOS.Diagram,Syncfusion.SfDiagram.iOS.SfDiagram)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.iOS.SfDiagramScrollView"/> class.
+            </summary>
+            <param name="view">View.</param>
+            <param name="diagram">Diagram.</param>
+            <param name="parent">Parent.</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.Style">
+            <summary>
+            Style.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Style.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.Style"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Style.#ctor(UIKit.UIColor,UIKit.UIColor,System.Single)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.Style"/> class.
+            </summary>
+            <param name="fillColor">The color that is used to fill.</param>
+            <param name="strokeColor">The color that is used to stroke.</param>
+            <param name="strokeWidth">The width of the stroke.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Style.FillColor">
+            <summary>
+            Gets or sets the color that is used to fill.
+            </summary>
+            <value>The color that is used to fill.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Style.StrokeColor">
+            <summary>
+            Gets or sets the color that is used to stroke.
+            </summary>
+            <value>The color that is used to stroke.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Style.StrokeWidth">
+            <summary>
+            Gets or sets the width of the stroke.
+            </summary>
+            <value>The width of the stroke.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Style.StrokeStyle">
+            <summary>
+            Gets or sets the stroke style.
+            </summary>
+            <value>The stroke style.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Style.FillStyle">
+            <summary>
+            Gets or sets the fill style.
+            </summary>
+            <value>The fill style.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.DecoratorStyle">
+            <summary>
+            Decorator style.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.DecoratorStyle.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.iOS.DecoratorStyle"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DecoratorStyle.InternalParent">
+            <summary>
+            Gets or sets the parent.
+            </summary>
+            <value>The parent.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DecoratorStyle.DecoratorType">
+            <summary>
+            Gets or sets the type of the decorator.
+            </summary>
+            <value>The type of the decorator.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DecoratorStyle.DecoratorSize">
+            <summary>
+            Gets or sets the DecoratorSize.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DecoratorStyle.DecoratorFillColor">
+            <summary>
+            Gets or sets the DecoratorFillColor.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DecoratorStyle.DecoratorStrokeColor">
+            <summary>
+            Gets or sets the DecoratorStrokeColor.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DecoratorStyle.DecoratorStrokeWidth">
+            <summary>
+            Gets or sets the width of the decorator stroke.
+            </summary>
+            <value>The width of the decorator stroke.</value>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.DataSourceSettingsController">
+            <summary>
+            DataSourceSettingsController derived from DataSourceSettings
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.DataSourceSettingsController.#ctor(Syncfusion.SfDiagram.iOS.DataSourceSettings,Syncfusion.SfDiagram.iOS.SfDiagram)">
+             <summary>
+            Initializes a new instance of the <see cref="T:DataSourceSettingsController"/> class.
+             </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.DataSourceSettings">
+            <summary>
+            DataSourceSettings
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.DataSourceSettings.#ctor">
+            <summary>
+            Initializes a new instance of the DataSourceSettings class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DataSourceSettings.DataSource">
+            <summary> 			 
+            Sets the DataSource of the SfDiagram.	
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DataSourceSettings.Id">
+            <summary> 			 
+            Sets the DataSourceSettings id of the SfDiagram.	
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DataSourceSettings.ParentId">
+            <summary> 			 
+            Sets the DataSourceSettings parentid of the SfDiagram.	
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DataSourceSettings.Root">
+            <summary>
+            Set the Root of the DataSource
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.BeginNodeRenderEventArgs">
+            <summary>
+            BeginNodeRender Event Arguments
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.BeginNodeRenderEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the BeginNodeRenderEventArgs class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.BeginNodeLayoutEventArgs">
+            <summary>
+            BeginNodeLayout Event Arguments
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfDiagram.iOS.BeginNodeLayoutEventArgs.HasSubTree">
+            <summary>
+            Gets or sets the HasSubtree
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.BeginNodeLayoutEventArgs.Type">
+            <summary>
+            Gets or sets the ChartType
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.BeginNodeLayoutEventArgs.Node">
+            <summary>
+            Gets or sets the Item
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.BeginNodeLayoutEventArgs.Orientation">
+            <summary>
+            Gets or sets the Orientation
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.BeginNodeLayoutEventArgs.#ctor(Syncfusion.SfDiagram.iOS.Node,Syncfusion.SfDiagram.iOS.ChartType,Syncfusion.SfDiagram.iOS.Orientation,System.Boolean)">
+            <summary>
+            Initializes a new instance of the BeginNodeLayout class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.Port">
+            <summary>
+            Port class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Port.#ctor">
+            <summary>
+            Initializes a new instance of the Port class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.NodeOffsetX">
+            <summary>
+            Gets or sets the NodeOffsetX.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.NodeOffsetY">
+            <summary>
+            Gets or sets the NodeOffsetXY.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.UnitWidth">
+            <summary>
+            Gets or sets the UnitWidth.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.UnitHeight">
+            <summary>
+            Gets or sets the UnitHeight.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.Style">
+            <summary>
+            Gets or sets the style.
+            </summary>
+            <value>The style.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.Shape">
+            <summary>
+            Gets or sets the shape.
+            </summary>
+            <value>The style.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.PortVisibility">
+            <summary>
+            Gets or sets the PortVisibility.
+            </summary>
+            <value>The Visibile.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.OffsetX">
+            <summary>
+            Gets or sets the OffsetX.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.OffsetY">
+            <summary>
+            Gets or sets the OffsetXY.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.Location">
+            <summary>
+            Gets or sets the location.
+            </summary>
+            <value>The location.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.View">
+            <summary>
+            Gets or sets the UIView.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.Parent">
+            <summary>
+            Gets or sets the Parent.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Port.Node">
+            <summary>
+            Gets or sets the Node.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.MatrixExt.Identity">
+            <summary> Gets an identity <see cref="T:System.Windows.Media.Matrix" />. </summary>
+            <returns>An identity matrix.</returns>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.MatrixExt.IsIdentity">
+            <summary> Gets a value that indicates whether this <see cref="T:System.Windows.Media.Matrix" /> structure is an identity matrix. </summary>
+            <returns>true if the <see cref="T:System.Windows.Media.Matrix" /> structure is an identity matrix; otherwise, false. The default is true.</returns>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.MatrixExt.Determinant">
+            <summary> Gets the determinant of this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <returns>The determinant of this <see cref="T:System.Windows.Media.Matrix" />.</returns>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.MatrixExt.HasInverse">
+            <summary> Gets a value that indicates whether this <see cref="T:System.Windows.Media.Matrix" /> structure is invertible. </summary>
+            <returns>true if the <see cref="T:System.Windows.Media.Matrix" /> has an inverse; otherwise, false. The default is true.</returns>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.MatrixExt.M11">
+            <summary>Gets or sets the value of the first row and first column of this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <returns>The value of the first row and first column of this <see cref="T:System.Windows.Media.Matrix" />. The default value is 1.</returns>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.MatrixExt.M12">
+            <summary> Gets or sets the value of the first row and second column of this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <returns>The value of the first row and second column of this <see cref="T:System.Windows.Media.Matrix" />. The default value is 0.</returns>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.MatrixExt.M21">
+            <summary> Gets or sets the value of the second row and first column of this <see cref="T:System.Windows.Media.Matrix" /> structure.</summary>
+            <returns>The value of the second row and first column of this <see cref="T:System.Windows.Media.Matrix" />. The default value is 0.</returns>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.MatrixExt.M22">
+            <summary>Gets or sets the value of the second row and second column of this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <returns>The value of the second row and second column of this <see cref="T:System.Windows.Media.Matrix" /> structure. The default value is 1.</returns>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.MatrixExt.OffsetX">
+            <summary>Gets or sets the value of the third row and first column of this <see cref="T:System.Windows.Media.Matrix" /> structure.  </summary>
+            <returns>The value of the third row and first column of this <see cref="T:System.Windows.Media.Matrix" /> structure. The default value is 0.</returns>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.MatrixExt.OffsetY">
+            <summary>Gets or sets the value of the third row and second column of this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <returns>The value of the third row and second column of this <see cref="T:System.Windows.Media.Matrix" /> structure. The default value is 0.</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.#ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary> Initializes a new instance of the <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="m11">The new <see cref="T:System.Windows.Media.Matrix" /> structure's <see cref="P:System.Windows.Media.Matrix.M11" /> coefficient.</param>
+            <param name="m12">The new <see cref="T:System.Windows.Media.Matrix" /> structure's <see cref="P:System.Windows.Media.Matrix.M12" /> coefficient.</param>
+            <param name="m21">The new <see cref="T:System.Windows.Media.Matrix" /> structure's <see cref="P:System.Windows.Media.Matrix.M21" /> coefficient.</param>
+            <param name="m22">The new <see cref="T:System.Windows.Media.Matrix" /> structure's <see cref="P:System.Windows.Media.Matrix.M22" /> coefficient.</param>
+            <param name="offsetX">The new <see cref="T:System.Windows.Media.Matrix" /> structure's <see cref="P:System.Windows.Media.Matrix.OffsetX" /> coefficient.</param>
+            <param name="offsetY">The new <see cref="T:System.Windows.Media.Matrix" /> structure's <see cref="P:System.Windows.Media.Matrix.OffsetY" /> coefficient.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.SetIdentity">
+            <summary> Changes this <see cref="T:System.Windows.Media.Matrix" /> structure into an identity matrix. </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.op_Multiply(Syncfusion.SfDiagram.iOS.MatrixExt,Syncfusion.SfDiagram.iOS.MatrixExt)">
+            <summary> Multiplies a <see cref="T:System.Windows.Media.Matrix" /> structure by another <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <returns>The result of multiplying <paramref name="trans1" /> by <paramref name="trans2" />.</returns>
+            <param name="trans1">The first <see cref="T:System.Windows.Media.Matrix" /> structure to multiply.</param>
+            <param name="trans2">The second <see cref="T:System.Windows.Media.Matrix" /> structure to multiply.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Multiply(Syncfusion.SfDiagram.iOS.MatrixExt,Syncfusion.SfDiagram.iOS.MatrixExt)">
+            <summary> Multiplies a <see cref="T:System.Windows.Media.Matrix" /> structure by another <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <returns>The result of multiplying <paramref name="trans1" /> by <paramref name="trans2" />.</returns>
+            <param name="trans1">The first <see cref="T:System.Windows.Media.Matrix" /> structure to multiply.</param>
+            <param name="trans2">The second <see cref="T:System.Windows.Media.Matrix" /> structure to multiply.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Append(Syncfusion.SfDiagram.iOS.MatrixExt)">
+            <summary> Appends the specified <see cref="T:System.Windows.Media.Matrix" /> structure to this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="matrix">The <see cref="T:System.Windows.Media.Matrix" /> structure to append to this <see cref="T:System.Windows.Media.Matrix" /> structure.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Prepend(Syncfusion.SfDiagram.iOS.MatrixExt)">
+            <summary> Prepends the specified <see cref="T:System.Windows.Media.Matrix" /> structure onto this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="matrix">The <see cref="T:System.Windows.Media.Matrix" /> structure to prepend to this <see cref="T:System.Windows.Media.Matrix" /> structure.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Rotate(System.Double)">
+            <summary> Applies a rotation of the specified angle about the origin of this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="angle">The angle of rotation.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.RotatePrepend(System.Double)">
+            <summary> Prepends a rotation of the specified angle to this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="angle">The angle of rotation to prepend.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.RotateAt(System.Double,System.Double,System.Double)">
+            <summary>Rotates this matrix about the specified point.</summary>
+            <param name="angle">The angle, in degrees, by which to rotate this matrix. </param>
+            <param name="centerX">The x-coordinate of the point about which to rotate this matrix.</param>
+            <param name="centerY">The y-coordinate of the point about which to rotate this matrix.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.RotateAtPrepend(System.Double,System.Double,System.Double)">
+            <summary>Prepends a rotation of the specified angle at the specified point to this <see cref="T:System.Windows.Media.Matrix" /> structure.</summary>
+            <param name="angle">The rotation angle, in degrees.</param>
+            <param name="centerX">The x-coordinate of the rotation center.</param>
+            <param name="centerY">The y-coordinate of the rotation center.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Scale(System.Double,System.Double)">
+            <summary> Appends the specified scale vector to this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="scaleX">The value by which to scale this <see cref="T:System.Windows.Media.Matrix" /> along the x-axis.</param>
+            <param name="scaleY">The value by which to scale this <see cref="T:System.Windows.Media.Matrix" /> along the y-axis.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.ScalePrepend(System.Double,System.Double)">
+            <summary> Prepends the specified scale vector to this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="scaleX">The value by which to scale this <see cref="T:System.Windows.Media.Matrix" /> structure along the x-axis.</param>
+            <param name="scaleY">The value by which to scale this <see cref="T:System.Windows.Media.Matrix" /> structure along the y-axis.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.ScaleAt(System.Double,System.Double,System.Double,System.Double)">
+            <summary>Scales this <see cref="T:System.Windows.Media.Matrix" /> by the specified amount about the specified point.</summary>
+            <param name="scaleX">The amount by which to scale this <see cref="T:System.Windows.Media.Matrix" /> along the x-axis. </param>
+            <param name="scaleY">The amount by which to scale this <see cref="T:System.Windows.Media.Matrix" /> along the y-axis.</param>
+            <param name="centerX">The x-coordinate of the scale operation's center point.</param>
+            <param name="centerY">The y-coordinate of the scale operation's center point.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.ScaleAtPrepend(System.Double,System.Double,System.Double,System.Double)">
+            <summary>Prepends the specified scale about the specified point of this <see cref="T:System.Windows.Media.Matrix" />.</summary>
+            <param name="scaleX">The x-axis scale factor.</param>
+            <param name="scaleY">The y-axis scale factor.</param>
+            <param name="centerX">The x-coordinate of the point about which the scale operation is performed.</param>
+            <param name="centerY">The y-coordinate of the point about which the scale operation is performed.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Skew(System.Double,System.Double)">
+            <summary> Appends a skew of the specified degrees in the x and y dimensions to this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="skewX">The angle in the x dimension by which to skew this <see cref="T:System.Windows.Media.Matrix" />.</param>
+            <param name="skewY">The angle in the y dimension by which to skew this <see cref="T:System.Windows.Media.Matrix" />.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.SkewPrepend(System.Double,System.Double)">
+            <summary> Prepends a skew of the specified degrees in the x and y dimensions to this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="skewX">The angle in the x dimension by which to skew this <see cref="T:System.Windows.Media.Matrix" />.</param>
+            <param name="skewY">The angle in the y dimension by which to skew this <see cref="T:System.Windows.Media.Matrix" />.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Translate(System.Double,System.Double)">
+            <summary> Appends a translation of the specified offsets to this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="offsetX">The amount to offset this <see cref="T:System.Windows.Media.Matrix" /> along the x-axis.</param>
+            <param name="offsetY">The amount to offset this <see cref="T:System.Windows.Media.Matrix" /> along the y-axis.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.TranslatePrepend(System.Double,System.Double)">
+            <summary> Prepends a translation of the specified offsets to this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <param name="offsetX">The amount to offset this <see cref="T:System.Windows.Media.Matrix" /> along the x-axis.</param>
+            <param name="offsetY">The amount to offset this <see cref="T:System.Windows.Media.Matrix" /> along the y-axis.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Transform(System.Drawing.Point)">
+            <summary>Transforms the specified point by the <see cref="T:System.Windows.Media.Matrix" /> and returns the result.</summary>
+            <returns>The result of transforming <paramref name="point" /> by this <see cref="T:System.Windows.Media.Matrix" />.</returns>
+            <param name="point">The point to transform.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Transform(System.Drawing.Point[])">
+            <summary>Transforms the specified points by this <see cref="T:System.Windows.Media.Matrix" />. </summary>
+            <param name="points">The points to transform. The original points in the array are replaced by their transformed values.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Invert">
+            <summary> Inverts this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <exception cref="T:System.InvalidOperationException">The <see cref="T:System.Windows.Media.Matrix" /> structure is not invertible.</exception>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.op_Equality(Syncfusion.SfDiagram.iOS.MatrixExt,Syncfusion.SfDiagram.iOS.MatrixExt)">
+            <summary> Determines whether the two specified <see cref="T:System.Windows.Media.Matrix" /> structures are identical.</summary>
+            <returns>true if <paramref name="matrix1" /> and <paramref name="matrix2" /> are identical; otherwise, false.</returns>
+            <param name="matrix1">The first <see cref="T:System.Windows.Media.Matrix" /> structure to compare.</param>
+            <param name="matrix2">The second <see cref="T:System.Windows.Media.Matrix" /> structure to compare.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.op_Inequality(Syncfusion.SfDiagram.iOS.MatrixExt,Syncfusion.SfDiagram.iOS.MatrixExt)">
+            <summary> Determines whether the two specified <see cref="T:System.Windows.Media.Matrix" /> structures are not identical.</summary>
+            <returns>true if <paramref name="matrix1" /> and <paramref name="matrix2" /> are not identical; otherwise, false.</returns>
+            <param name="matrix1">The first <see cref="T:System.Windows.Media.Matrix" /> structure to compare.</param>
+            <param name="matrix2">The second <see cref="T:System.Windows.Media.Matrix" /> structure to compare.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Equals(Syncfusion.SfDiagram.iOS.MatrixExt,Syncfusion.SfDiagram.iOS.MatrixExt)">
+            <summary> Determines whether the two specified <see cref="T:System.Windows.Media.Matrix" /> structures are identical.</summary>
+            <returns>true if <paramref name="matrix1" /> and <paramref name="matrix2" /> are identical; otherwise, false.</returns>
+            <param name="matrix1">The first <see cref="T:System.Windows.Media.Matrix" /> structure to compare.</param>
+            <param name="matrix2">The second <see cref="T:System.Windows.Media.Matrix" /> structure to compare.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Equals(System.Object)">
+            <summary> Determines whether the specified <see cref="T:System.Object" /> is a <see cref="T:System.Windows.Media.Matrix" /> structure that is identical to this <see cref="T:System.Windows.Media.Matrix" />. </summary>
+            <returns>true if <paramref name="o" /> is a <see cref="T:System.Windows.Media.Matrix" /> structure that is identical to this <see cref="T:System.Windows.Media.Matrix" /> structure; otherwise, false.</returns>
+            <param name="o">The <see cref="T:System.Object" /> to compare.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.Equals(Syncfusion.SfDiagram.iOS.MatrixExt)">
+            <summary> Determines whether the specified <see cref="T:System.Windows.Media.Matrix" /> structure is identical to this instance. </summary>
+            <returns>true if instances are equal; otherwise, false. </returns>
+            <param name="value">The instance of <see cref="T:System.Windows.Media.Matrix" /> to compare to this instance.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.MatrixExt.GetHashCode">
+            <summary> Returns the hash code for this <see cref="T:System.Windows.Media.Matrix" /> structure. </summary>
+            <returns>The hash code for this instance.</returns>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.NodeCollection">
+            <summary>
+            NodeCollection class
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.NodeCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.iOS.NodeCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.NodeCollection.Add(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Add the specified node.
+            </summary>
+            <returns>The add.</returns>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.NodeCollection.Remove(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Remove the specified node.
+            </summary>
+            <returns>The remove.</returns>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.NodeCollection.RemoveAt(System.Int32)">
+            <summary>
+            Remove the specified node.
+            </summary>
+            <returns>The remove.</returns>
+            <param name="index">int.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.NodeCollection.Count">
+            <summary>
+            Count this instance.
+            </summary>
+            <returns>The count.</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.NodeCollection.Clear">
+            <summary>
+            Count this instance.
+            </summary>
+            <returns>The count.</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.NodeCollection.Insert(System.Int32,Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Insert the specified node.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.NodeCollection.IndexOf(Syncfusion.SfDiagram.iOS.Node)">
+            <summary>
+            Index of the specified node.
+            </summary>
+            <returns>The indexof.</returns>
+            <param name="node">Node.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.NodeCollection.GetEnumerator">
+            <summary>
+            IEnumerator collection of Node.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.NodeCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:Syncfusion.SfDiagram.iOS.NodeCollection"/> at the specified index.
+            </summary>
+            <param name="index">Index.</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.ConnectorCollection">
+            <summary>
+            Connector collection.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.ConnectorCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.iOS.ConnectorCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.ConnectorCollection.Add(Syncfusion.SfDiagram.iOS.Connector)">
+            <summary>
+            Add the specified connector.
+            </summary>
+            <param name="connector">Connector.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.ConnectorCollection.Insert(System.Int32,Syncfusion.SfDiagram.iOS.Connector)">
+            <summary>
+            Insert the specified connectora at the index.
+            </summary>
+            <param name="index">Index.</param>
+            <param name="connector">Connector.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.ConnectorCollection.Remove(Syncfusion.SfDiagram.iOS.Connector)">
+            <summary>
+            Remove the specified connector.
+            </summary>
+            <param name="connector">Connector.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.ConnectorCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes connector at specified index.
+            </summary>
+            <param name="index">Index.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.ConnectorCollection.Count">
+            <summary>
+            Gets the count of connector collection
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.ConnectorCollection.GetEnumerator">
+            <summary>
+            Gets the enumerator.
+            </summary>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.ConnectorCollection.IndexOf(Syncfusion.SfDiagram.iOS.Connector)">
+            <summary>
+            Indexs value of the specified connector.
+            </summary>
+            <returns>The Index value</returns>
+            <param name="connector">Connector.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.ConnectorCollection.Item(System.Int32)">
+            <summary>
+            Gets the <see cref="T:Syncfusion.SfDiagram.iOS.ConnectorCollection"/> at the specified index.
+            </summary>
+            <param name="index">Index.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.ConnectorCollection.Clear">
+            <summary>
+            Clear this connector collection.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.AnnotationCollection">
+            <summary>
+            Annotation collection.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.AnnotationCollection.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.iOS.AnnotationCollection"/> class.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.AnnotationCollection.Add(Syncfusion.SfDiagram.iOS.Annotation)">
+            <summary>
+            Add the specified annotation.
+            </summary>
+            <param name="annotation">Annotation.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.AnnotationCollection.Insert(System.Int32,Syncfusion.SfDiagram.iOS.Annotation)">
+            <summary>
+            Insert the annotation at specified index
+            </summary>
+            <param name="index">Index.</param>
+            <param name="annotation">Annotation.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.AnnotationCollection.Remove(Syncfusion.SfDiagram.iOS.Annotation)">
+            <summary>
+            Remove the specified annotation.
+            </summary>
+            <returns>The remove.</returns>
+            <param name="annotation">Annotation.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.AnnotationCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes the annotation at specified index.
+            </summary>
+            <param name="index">Index.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.AnnotationCollection.Count">
+            <summary>
+            Gets the annotation collection count.
+            </summary>
+            <value>The count.</value>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.AnnotationCollection.IndexOf(Syncfusion.SfDiagram.iOS.Annotation)">
+            <summary>
+            returns the index value of annotation
+            </summary>
+            <returns>The of.</returns>
+            <param name="annotation">Annotation.</param>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.AnnotationCollection.Item(System.Int32)">
+            <summary>
+            Gets the annotation at the specified index.
+            </summary>
+            <param name="index">Index.</param>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.AnnotationCollection.Clear">
+            <summary>
+            Clear this annotation colelction.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.Annotation">
+            <summary>
+            Annotation.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Annotation.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.iOS.Annotation"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Annotation.Content">
+            <summary>
+            Gets or sets the content.
+            </summary>
+            <value>The content.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Annotation.HorizontalAlignment">
+            <summary>
+            Gets or sets the horizontal alignment.
+            </summary>
+            <value>The horizontal alignment.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.Annotation.VerticalAlignment">
+            <summary>
+            Gets or sets the vertical Alignment.
+            </summary>
+            <value>The vertical AL ignment.</value>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.Annotation.GetAnnotationObject">
+            <summary>
+            Gets the content object.
+            </summary>
+            <returns>The content object.</returns>
+        </member>
+        <member name="M:Syncfusion.SfDiagram.iOS.RenderLabel.#ctor(System.Object,Syncfusion.SfDiagram.iOS.Annotation,UIKit.UIView)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfDiagram.iOS.RenderLabel"/> class.
+            </summary>
+            <param name="Sender">Sender.</param>
+            <param name="annotation">Annotation.</param>
+            <param name="view">View.</param>
+        </member>
+        <member name="T:Syncfusion.SfDiagram.iOS.DiagramBaseItem">
+            <summary>
+            Diagram Common properties
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DiagramBaseItem.Parent">
+            <summary>
+            Gets or sets the Parent of the connector.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DiagramBaseItem.InternalParent">
+            <summary>
+            Gets or set the internalparent
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DiagramBaseItem.View">
+            <summary>
+            Gets or sets the UIView internally.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DiagramBaseItem.Style">
+            <summary>
+            Gets or sets the style for the connector
+            </summary>
+            <value>The style.</value>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DiagramBaseItem.Opacity">
+            <summary>
+            Gets or set the opacity
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfDiagram.iOS.DiagramBaseItem.Visibile">
+            <summary>
+            Gets or set the visibility
+            </summary>
+        </member>
+    </members>
+</doc>

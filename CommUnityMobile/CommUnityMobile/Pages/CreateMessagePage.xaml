@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Add the xmlns:fresh line and use it to resolve the fresh:FreshBaseContentPage declaration -->
+<fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                            x:Class="FreshWithSQLite.Pages.CreateMessagePage"
+                            xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite"
+                            xmlns:customControls="clr-namespace:FreshWithSQLite.CustomControls;assembly=FreshWithSQLite"
+                            xmlns:markupExtensions="clr-namespace:FreshWithSQLite.MarkupExtensions;assembly=FreshWithSQLite"
+                            NavigationPage.HasBackButton="False">
+  <ContentPage.Content>
+    <AbsoluteLayout BackgroundColor="#36393e">
+      <BoxView BackgroundColor="#99aab5" AbsoluteLayout.LayoutBounds="0,0,1,50" AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional" />
+
+      <Button BackgroundColor="#7289da" AbsoluteLayout.LayoutBounds=".5,20,60,60" AbsoluteLayout.LayoutFlags="XProportional" BorderRadius="30" />
+      <Label Text="Your message" FontAttributes="Bold" FontSize="24"
+          TextColor="#99aab5" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds=".5,70,1,40" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional" />
+      <AbsoluteLayout  AbsoluteLayout.LayoutBounds=".5,180,1,140" AbsoluteLayout.LayoutFlags="XProportional,WidthProportional">
+        <Image AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+              Source="{markupExtensions:PlatformImage SourceImage='Message'}" Aspect="AspectFill"/>
+
+        <Editor Text="{Binding MessageText}" TextColor="#99aab5" AbsoluteLayout.LayoutBounds=".5,0,340,140" AbsoluteLayout.LayoutFlags="PositionProportional"/>
+      </AbsoluteLayout>
+      <customControls:ImageButton             Source="{markupExtensions:PlatformImage SourceImage='IconFABSend'}"
+                                               Command="{Binding AddCommand}"
+                                               AbsoluteLayout.LayoutFlags="PositionProportional"
+                                               AbsoluteLayout.LayoutBounds="1.0,1.0,-1,-1"
+                                               Margin="10" />
+
+    </AbsoluteLayout>
+
+
+  </ContentPage.Content>
+</fresh:FreshBaseContentPage>

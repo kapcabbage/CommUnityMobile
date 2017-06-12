@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfImageEditor.XForms</name>
+    </assembly>
+    <members>
+        <member name="P:Syncfusion.SfImageEditor.XForms.SfImageEditor.Source">
+            <summary>
+            to get and set source of the image
+            </summary>
+        </member>
+    </members>
+</doc>

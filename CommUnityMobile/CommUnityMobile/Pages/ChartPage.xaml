@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<fresh:FreshBaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FreshWithSQLite.Pages.ChartPage"
+             xmlns:fresh="clr-namespace:FreshMvvm;assembly=FreshWithSQLite"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:customControls="clr-namespace:FreshWithSQLite.CustomControls;assembly=FreshWithSQLite"
+             xmlns:markupExtensions="clr-namespace:FreshWithSQLite.MarkupExtensions;assembly=FreshWithSQLite">
+  <AbsoluteLayout>
+  <chart:SfChart x:Name="Chart" VerticalOptions="FillAndExpand" AbsoluteLayout.LayoutFlags="All"
+                      AbsoluteLayout.LayoutBounds="0,1,1,1">
+    <chart:SfChart.Legend>
+      <chart:ChartLegend/>
+    </chart:SfChart.Legend>
+    <chart:SfChart.ChartBehaviors>
+      <chart:ChartZoomPanBehavior EnablePanning="true" EnableDoubleTap="false" EnableSelectionZooming="True"/>
+    </chart:SfChart.ChartBehaviors>
+    <chart:SfChart.BackgroundColor>
+      <OnPlatform x:TypeArguments="Color">
+        <OnPlatform.iOS>
+          #99aab5
+        </OnPlatform.iOS>
+        <OnPlatform.Android>
+          #99aab5
+        </OnPlatform.Android>
+      </OnPlatform>
+    </chart:SfChart.BackgroundColor>
+    <chart:SfChart.PrimaryAxis>
+      <chart:NumericalAxis>
+      </chart:NumericalAxis>
+    </chart:SfChart.PrimaryAxis>
+
+    <chart:SfChart.SecondaryAxis>
+      <chart:NumericalAxis Minimum="0">
+      </chart:NumericalAxis>
+    </chart:SfChart.SecondaryAxis>
+
+    <chart:SfChart.Series>
+      <chart:LineSeries x:Name="series" Label="Data"/>
+    </chart:SfChart.Series>
+  </chart:SfChart>
+
+
+  <customControls:ImageButton             Source="{markupExtensions:PlatformImage SourceImage='IconFAB'}"
+                                          Command="{Binding AddCommand}"
+                                          AbsoluteLayout.LayoutFlags="PositionProportional"
+                                          AbsoluteLayout.LayoutBounds="1.0,1.0,-1,-1"
+                                          Margin="10" />
+  </AbsoluteLayout>
+</fresh:FreshBaseContentPage>

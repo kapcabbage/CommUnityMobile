@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfRangeSlider.iOS</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SFTickPlacement">
+            <summary>
+            Tick placement determines where to draw tick marks in relation to the track.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFTickPlacement.SFTickPlacementBottomRight">
+            <summary>
+            Tick marks can be placed either below the track in horizontal orientation or right of the track in vertical orientation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFTickPlacement.SFTickPlacementInline">
+            <summary>
+            Ticks are placed along the track.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFTickPlacement.SFTickPlacementNone">
+            <summary>
+            No Tick marks along the track.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFTickPlacement.SFTickPlacementOutSide">
+            <summary>
+            Tick marks are placed on both sides of the track either in horizontal or vertical orientation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFTickPlacement.SFTickPlacementTopLeft">
+            <summary>
+            Tick marks are placed either above the track in horizontal orientation or left of the track in vertical orientation.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SFOrientation">
+            <summary>
+            Orientation property has the following two options.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFOrientation.SFOrientationVertical">
+            <summary>
+            In this orientation, the values and the slider are set horizontally.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFOrientation.SFOrientationHorizontal">
+            <summary>
+            In this Orientation, the values and the slider are set vertically.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SFValuePlacement">
+            <summary>
+            Value placement describes the position of the Value respective to ticks.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFValuePlacement.SFValuePlacementTopLeft">
+            <summary>
+            Values are placed either above the track in horizontal orientation or left of the track in vertical orientation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFValuePlacement.SFValuePlacementBottomRight">
+            <summary>
+            Values can be placed either below the track in horizontal orientation or right of the track in vertical orientation.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SFSnapsTo">
+            <summary>
+            Snaps to determines whether the RangeSlider snaps to steps or ticks.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFSnapsTo.SFSnapsToStepValues">
+            <summary>
+            The StepFrequency property will be used to specify the interval between snap points.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFSnapsTo.SFSnapsToTicks">
+            <summary>
+             The TickFrequency property will be used to specify the interval between snap points.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFSnapsTo.SFSnapsToNone">
+            <summary>
+            The thumb is moved independent of any values.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SFToolTipPlacement">
+            <summary>
+            ToolTip Placement is used to control the position of the tooltip in relation to the thumb.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFToolTipPlacement.SFToolTipPlacementTopLeft">
+            <summary>
+            The Tooltip will be placed either above the Thumb in horizontal orientation or left of the Thumb in vertical orientation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFToolTipPlacement.SFToolTipPlacementBottomRight">
+            <summary>
+            The Tooltip will be placed either below the Thumb in horizontal orientation or right of the Thumb in vertical orientation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFToolTipPlacement.SFToolTipPlacementNone">
+            <summary>
+            Tooltip will be collapsed.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SFLabelPlacement">
+            <summary>
+            Label placement describes the position of the labels respective to ticks.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFLabelPlacement.SFLabelPlacementTopLeft">
+            <summary>
+            Labels are placed either above the track in horizontal orientation or left of the track in vertical orientation.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfRangeSlider.iOS.SFLabelPlacement.SFLabelPlacementBottomRight">
+            <summary>
+            Labels can be placed either below the track in horizontal orientation or right of the track in vertical orientation.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.ValueEventHandler">
+            <summary>
+            Represents the method that will handle the SfRangeSlider value changing
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="E:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.ValueChange">
+            <summary>
+            Occurs when value changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.OnValueChanged(Syncfusion.SfRangeSlider.iOS.ValueEventArgs)">
+            <summary>
+            Raises the value changing.
+            </summary>
+            <param name="args">Arguments.</param>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.RangeEventHandler">
+            <summary>
+            Represents the method that will handle the SfRangeSlider range changing
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="E:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.RangeValueChange">
+            <summary>
+            Occurs when value changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.OnRangeChanged(Syncfusion.SfRangeSlider.iOS.RangeEventArgs)">
+            <summary>
+            Raises the value changing.
+            </summary>
+            <param name="args">Arguments.</param>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.RangeStartEventHandler">
+            <summary>
+            Represents the method that will handle the SfRangeSlider range start changing
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="E:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.RangeStartValueChange">
+            <summary>
+            Occurs when value changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.OnRangeStartChanged(Syncfusion.SfRangeSlider.iOS.RangeStartEventArgs)">
+            <summary>
+            Raises the value changing.
+            </summary>
+            <param name="args">Arguments.</param>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.RangeEndEventHandler">
+            <summary>
+            Represents the method that will handle the SfRangeSlider range start changing
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="E:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.RangeEndValueChange">
+            <summary>
+            Occurs when value changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.OnRangeEndChanged(Syncfusion.SfRangeSlider.iOS.RangeEndEventArgs)">
+            <summary>
+            Raises the value changing.
+            </summary>
+            <param name="args">Arguments.</param>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.MultiRangeEventHandler">
+            <summary>
+            Represents the method that will handle the SfRangeSlider range start changing
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="E:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.RangeMultiChange">
+            <summary>
+            Occurs when value changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfRangeSlider.iOS.SfRangeSlider.OnMultiRangeChanged(Syncfusion.SfRangeSlider.iOS.MultiRangeEventArgs)">
+            <summary>
+            Raises the value changing.
+            </summary>
+            <param name="args">Arguments.</param>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.ValueEventArgs">
+            <summary>
+            Value event arguments.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.RangeEventArgs">
+            <summary>
+            Range event arguments.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.RangeStartEventArgs">
+            <summary>
+            RangeStart event arguments.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.RangeEndEventArgs">
+            <summary>
+            RangeEnd event arguments.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfRangeSlider.iOS.MultiRangeEventArgs">
+            <summary>
+            MultiRange event arguments.
+            </summary>
+        </member>
+    </members>
+</doc>

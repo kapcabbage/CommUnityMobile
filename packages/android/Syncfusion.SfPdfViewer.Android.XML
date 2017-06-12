@@ -1,0 +1,585 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfPdfViewer.Android</name>
+    </assembly>
+    <members>
+        <member name="F:Syncfusion.SfPdfViewer.Renderers.Renderer.m_changeInHeight">
+            <summary>
+            Internal variable to hold the initialized pdf document page.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfPdfViewer.Renderers.Renderer.m_pixelHeight">
+            <summary>
+            Internal variable to hold the initialized pdf document page.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Renderers.Renderer.#ctor(System.Double,System.Boolean,Syncfusion.SfPdfViewer.Android.SfPdfViewer)">
+            <summary>
+            Retrieves an object by its reference.
+            </summary>
+            <param name="pointer">The reference of the object.</param>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Renderers.TextElement.Render(System.Drawing.PointF,System.Double,System.Collections.Generic.Dictionary{System.Int32,System.Int32},System.Double,System.Collections.Generic.Dictionary{System.Int32,System.String},System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.Int32,System.String},Syncfusion.SfPdfViewer.Android.Base.Matrix@)">
+            <summary>
+            Renders the Text to the panel
+            </summary>
+            <param name="g">graphics element</param>
+            <param name="currentLocation">location in which the graphics is to be drawn</param>
+        </member>
+        <member name="P:Syncfusion.SfPdfViewer.Android.PageChangedEventArgs.PageNumber">
+            <summary>
+            Gets the current page number
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.Base.GlyphWriter.#ctor(System.Collections.Generic.Dictionary{System.String,System.Byte[]},System.Boolean)">
+            <summary>
+            Represents the graphics object
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.Base.PageResourceLoader.GetPageResources(Syncfusion.Pdf.PdfPageBase)">
+            <summary>
+            Extracts the pageResource from the page
+            </summary>
+            <param name="page">Page whose resouce is needed</param>
+            <returns>pageResource of the given page</returns>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.Base.PageResourceLoader.GetPageResources(Syncfusion.Pdf.PdfPageBase,System.Boolean)">
+            <summary>
+            Extracts the pageResource from the page
+            </summary>
+            <param name="page">Page whose resouce is needed</param>
+            <param name="isSkipImage">To Skip imageResources</param>
+            <returns>pageResource of the given page</returns>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.Base.PageResourceLoader.GetExtendedGraphicResources(Syncfusion.Pdf.Primitives.PdfDictionary)">
+            <summary>
+            Collects all the ExtendedGraphicsSatate elements in the pdf document
+            </summary>
+            <param name="resourceDictionary">containing all the resources of the document</param>
+            <returns>dictionary of ExtGState elements</returns>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.Base.PageResourceLoader.GetFontResources(Syncfusion.Pdf.Primitives.PdfDictionary)">
+            <summary>
+            Collects all the fonts in the page in a dictionary
+            </summary>
+            <param name="resourceDictionary">dictionary containing all the resources in the Xobjects</param>
+            <returns>dictionary containing font name and the font</returns>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.Base.PageResourceLoader.DecodeTest(Syncfusion.Pdf.PdfPageBase,System.String,System.String)">
+            <summary>
+            Extracts the text from the page given
+            </summary>
+            <param name="page">page from which text is extracted</param>
+            <param name="fontName">font used in the text</param>
+            <param name="textToDecode">text in the page to be decoded</param>
+            <returns>decoded text</returns>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.Base.PageResourceLoader.GetFontResources(Syncfusion.Pdf.Primitives.PdfDictionary,Syncfusion.Pdf.PdfPageBase)">
+            <summary>
+            Collects all the fonts in the page in a dictionary
+            </summary>
+            <param name="resourceDictionary">dictionary containing all the resources in the page</param>
+            <param name="page">page in which text is to be extracted</param>
+            <returns>dictionary containing font name and the font</returns>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.Base.PageResourceLoader.GetImageResources(Syncfusion.Pdf.Primitives.PdfDictionary,Syncfusion.Pdf.PdfPageBase,System.Collections.Generic.Dictionary{System.String,Syncfusion.Pdf.IO.PdfMatrix}@)">
+            <summary>
+            Collects all the images in the pdf document
+            </summary>
+            <param name="resourceDictionary">containing all the resources of the document</param>
+            <returns>dictionary of images</returns>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.Base.PageResourceLoader.UpdatePageResources(Syncfusion.SfPdfViewer.Android.Base.PdfPageResources,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Updates the resources in the page
+            </summary>
+            <param name="pageResources">Existing page resources</param>
+            <param name="objects">Dictionary items to the updated</param>
+            <returns>Updated page resource</returns>
+        </member>
+        <member name="T:Syncfusion.SfPdfViewer.Android.PageChangedEventHandler">
+            <summary>
+            Represents the method that will handle the PageChanged/> event. 
+            </summary>
+            <param name="sender">The sender the contains SfPdfViewer.</param>
+            <param name="args">The <see cref="T:Syncfusion.SfPdfViewer.Android.PageChangedEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="T:Syncfusion.SfPdfViewer.Android.SearchEventHandler">
+            <summary>
+            Represents the method that will handle the Text Search events. 
+            </summary>
+            <param name="sender">The sender the contains SfPdfViewer.</param>
+            <param name="args">The <see cref="T:Syncfusion.SfPdfViewer.Android.TextSearchEventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="T:Syncfusion.SfPdfViewer.Android.DocumentLoadedEventHandler">
+            <summary>
+            Represents the method that will handle the DocumentLoaded/> event. 
+            </summary>
+            <param name="sender">The sender the contains SfPdfViewer.</param>
+            <param name="args">The <see cref="T:System.EventArgs"/> that contains the event data.</param>
+        </member>
+        <member name="E:Syncfusion.SfPdfViewer.Android.SfPdfViewer.PageChanged">
+            <summary>
+            Occurs when current page is changed.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfPdfViewer.Android.SfPdfViewer.DocumentLoaded">
+            <summary>
+            Occurs when document is loaded.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfPdfViewer.Android.SfPdfViewer.TextSearchSettings">
+            <summary>
+            The class that provides settings for text search
+            </summary>   
+        </member>
+        <member name="P:Syncfusion.SfPdfViewer.Android.SfPdfViewer.PageNumber">
+            <summary>
+            Gets or Sets the page number
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.SfPdfViewer.Unload">
+            <summary>
+            Unloads the PDF Viewer
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.SfPdfViewer.GoToNextPage">
+            <summary>
+            Navigates to the next page of the document.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.SfPdfViewer.GoToPreviousPage">
+            <summary>
+            Navigates to the previous page of the document.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.SfPdfViewer.SearchNext(System.String)">
+            <summary>
+            Search the next text instance from the PDF document
+            </summary>
+            <param name="targetText">Text being searched</param>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.SfPdfViewer.SearchPrevious(System.String)">
+            <summary>
+            Search the previous text instance from the PDF document
+            </summary>
+            <param name="targetText">Text being searched</param>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.SfPdfViewer.SearchText(System.String)">
+            <summary>
+            Search the text instances from the PDF document
+            </summary>
+            <param name="targetText">Text being searched</param>
+        </member>
+        <member name="P:Syncfusion.SfPdfViewer.Android.SfPdfViewer.PageCount">
+            <summary>
+            Gets the page count of PDF document
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.SfPdfViewer.LoadDocument(System.IO.Stream)">
+            <summary>
+            Loads a Pdf document  in the Pdf viewer from the specified stream.
+            </summary>
+            <param name="stream">A stream that contains the data for the Pdf document</param>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.SfPdfViewer.GoToPage(System.Int32)">
+            <summary>
+            Navigates to the specified page.
+            </summary>
+            <param name="pageNumber">The page number</param>
+        </member>
+        <member name="P:Syncfusion.SfPdfViewer.Android.TextSearchSettings.CurrentInstanceColor">
+            /// <summary>
+            Get or Sets the ARGB color values for current instance of text search.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfPdfViewer.Android.TextSearchSettings.OtherInstanceColor">
+            <summary>
+            Get or Sets the ARGB color values for all instances of text search.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfPdfViewer.Android.ScrollViewEx.ResetSearchOnScroll">
+            <summary>
+            Reset Search on scroll.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Pdf.CMap.WriteShort(System.Int16)">
+            <summary>
+            Writes short value into the font stream
+            </summary>
+            <param name="value">Short value to be written</param>
+        </member>
+        <member name="M:Syncfusion.Pdf.CMap.WriteInt(System.Int32)">
+            <summary>
+            Writes integer value into the font stream
+            </summary>
+            <param name="value">Integer value to be written</param>
+        </member>
+        <member name="M:Syncfusion.Pdf.CMap.WriteString(System.String)">
+            <summary>
+            Writes string value into the font stream
+            </summary>
+            <param name="value">String value to be written</param>
+        </member>
+        <member name="M:Syncfusion.Pdf.CMap.WriteBytes(System.Byte[])">
+            <summary>
+            Write the bytes into the font stream
+            </summary>
+            <param name="buffer">byte array to be written</param>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontDecode.CreateFontStream(System.Collections.Generic.List{Syncfusion.Pdf.TableEntry})">
+            <summary>
+            Generate the font stream with respect to the font tables present in the entries
+            </summary>
+            <param name="entries">list of font tables in the font</param>
+            <returns>stream of the font</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontDecode.WriteHeader(Syncfusion.Pdf.FontHeader)">
+            <summary>
+            Writes the header into the font stream
+            </summary>
+            <param name="head">Header information of the font</param>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontDecode.WriteEntry(Syncfusion.Pdf.TableEntry)">
+            <summary>
+            Writes table entry into the font stream
+            </summary>
+            <param name="entry">Table entry</param>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontDecode.WriteShort(System.Int16)">
+            <summary>
+            Writes short value into the font stream
+            </summary>
+            <param name="value">Short value to be written</param>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontDecode.WriteInt(System.Int32)">
+            <summary>
+            Writes integer value into the font stream
+            </summary>
+            <param name="value">Integer value to be written</param>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontDecode.WriteString(System.String)">
+            <summary>
+            Writes string value into the font stream
+            </summary>
+            <param name="value">String value to be written</param>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontDecode.WriteBytes(System.Byte[])">
+            <summary>
+            Write the bytes into the font stream
+            </summary>
+            <param name="buffer">byte array to be written</param>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontDecode.GetSearchRange(System.Int32)">
+            <summary>
+            Calculates the search range of the font
+            </summary>
+            <param name="noOfTables">Number of tables in the font</param>
+            <returns>Value of the search range</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontDecode.GetEntrySelector(System.Int32)">
+            <summary>
+            Calculates the entry selector of the font
+            </summary>
+            <param name="noOfTables">Number of tables in the font</param>
+            <returns>Value of the entry selector</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontDecode.GetRangeShift(System.Int32,System.Int32)">
+            <summary>
+            Calculates the range shift of the font
+            </summary>
+            <param name="noOfTables">Number of tables in the font</param>
+            <param name="searchRange">Search range of the font</param>
+            <returns>Value of the range shift</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontFile2.readHeader">
+            <summary>
+            Reads the header of the font
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontFile2.readTablesForFont">
+            <summary>
+            Reads the table part to get the details about the tables in the font
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontFile2.getTableID(System.String)">
+            <summary>
+            Returns the id of the font table corresponding to the tag
+            </summary>
+            <param name="tag">Font tag</param>
+            <returns>Corresponding table ID</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontFile2.getnextUint32">
+            <summary>
+            Reads 4 bytes from the byte array
+            </summary>
+            <returns>Corresponding value</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontFile2.getnextUint64">
+            <summary>
+            Reads 8 bytes from the byte array
+            </summary>
+            <returns>Corresponding value</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontFile2.getnextUint32AsTag">
+            <summary>
+            Read 4 bytes from the byte array
+            </summary>
+            <returns>Corresponding string value</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontFile2.getnextUint16">
+            <summary>
+            Read 2 bytes from the byte array
+            </summary>
+            <returns>Corresponding integer value</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontFile2.getTableBytes(System.Int32)">
+            <summary>
+            Separated the byte array corresponding to the table entry from the font stream
+            </summary>
+            <param name="tableID">Table ID</param>
+            <returns>Byte array of the table</returns>
+        </member>
+        <member name="F:Syncfusion.Pdf.FontStructure.differenceTable">
+            <summary>
+            Internal variable that holds the character code and character.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Pdf.FontStructure.fontReference">
+            <summary>
+            Internal variable that stores token.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.FontStructure.FontName">
+            <summary>
+            Holds the font name associated with the text element
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.FontStructure.FontStyle">
+            <summary>
+            Holds the font style of the text to be decoded.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.FontStructure.FontWeight">
+            <summary>
+            Holds the font weight of the text to be decoded.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.FontStructure.IsSameFont">
+            <summary>
+            Gets and sets whether same font is denoted in more than one XObject.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.FontStructure.CharacterMapTable">
+            <summary>
+            Represents the mapping table which contains the mapping value to the encoded text in the PDF document
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.FontStructure.FontEncoding">
+            <summary>
+            Holds the font encoding associated with the text element
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.Decode(System.String,System.Boolean)">
+            <summary>
+            Takes in the encoded text, identifies the type of encoding used, decodes the encoded text, returns the decoded text.
+            </summary>
+            <param name="textToDecode">
+            Encoded string from the PDF document.
+            </param>
+            <returns>
+            Decoded string, human readable.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.GetLiteralString(System.String)">
+            <summary>
+            Decodes the octal text in the encoded text.
+            </summary>
+            <param name="encodedText">The text encoded from the PDF document</param>
+            <returns>Decoded text with replaced octal texts</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.GetHexaDecimalString(System.String)">
+            <summary>
+            Decodes the HEX encoded string.
+            </summary>
+            <param name="hexEncodedText">
+            HEX encoded string.
+            </param>
+            <returns>
+            Decoded string.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.GetFontName">
+            <summary>
+            Extracts the font name associated with the string.
+            </summary>
+            <returns>
+            Font name.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.GetFontEncoding">
+            <summary>
+            Extracts the font encoding associated with the text string
+            </summary>
+            <returns>
+            Font style.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.AdobeJapanCidMap(System.IO.StreamReader)">
+            <summary>
+            Parsing the stream from the Adobe-Japan1-6.cidmap resource to create CIDMapTable
+            </summary>
+            <param name="reader">CID map table resource</param>
+            <returns>Adobe Japan CID map table</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.AdobeJapanCidMapTableGlyphParser(System.String)">
+            <summary>
+            Parse the Japanese character where the value is reference to another key in the Adobe Japan Cid Map Table
+            </summary>
+            <param name="mapValue">mapped value which is a reference to another key</param>
+            <returns>Mapped Character present in the Adobe Japan Cid Map table</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.DecodeASCII85Stream(System.IO.MemoryStream)">
+            <summary>
+            Decodes the ASCII85 encoded stream
+            </summary>
+            <param name="encodedStream">Encoded stream</param>
+            <returns>Decoded Stream</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.DecodeFlateStream(System.IO.MemoryStream)">
+            <summary>
+            Decodes the Flate encoded stream
+            </summary>
+            <param name="encodedStream">Encoded stream</param>
+            <returns>Decoded Stream</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.GetCharacterMapTable">
+            <summary>
+            Builds the mapping table that is used to map the decoded text to get the expected text.
+            </summary>
+            <returns>
+            A dictionary with key as the encoded element and value as the value to be mapped to.
+            </returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.GetDifferencesDictionary">
+            <summary>
+            Builds the mapping table that is used to map the decoded text to get the expected text.
+            </summary>		
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.GetLatinCharacter(System.String)">
+            <summary>
+             Gets Latin Character
+            </summary>
+            <param name="decodedCharacter">The decodedCharacter.</param>        
+            <returns>decodedCharacter</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.IsNonPrintableCharacter(System.Char)">
+            <summary>
+            Checks whether the specified character is Non-Printable character or not.
+            </summary>
+            <param name="character">The character to be verified as either Non-Printable or not</param>
+            <returns>Returns true, if the specified character is Non-Printable character. Otherwise it returns false</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.MapCharactersFromTable(System.String)">
+            <summary>
+            Takes in the decoded text and maps it with its corresponding entry in the CharacterMapTable
+            </summary>
+            <param name="decodedText">decoded text </param>
+            <returns>Expected text string</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.MapDifferences(System.String)">
+            <summary>
+            Takes in the decoded text and maps it with its corresponding entry in the CharacterMapTable
+            </summary>
+            <param name="encodedText">encoded text </param>
+            <returns>Expected text string</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.GetSpecialCharacter(System.String)">
+            <summary>
+             Gets Latin Character
+            </summary>
+            <param name="decodedCharacter">The decodedCharacter.</param>        
+            <returns>decodedCharacter</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.UnEscapeString(System.String)">
+            <summary>
+            Method to remove the unrecoganized escape sequences
+            </summary>
+            <param name="text">Text with unrecoganized escape sequences</param>
+            <returns>Text without unrecoganized escape sequences</returns>
+        </member>
+        <member name="M:Syncfusion.Pdf.FontStructure.EscapeSymbols(System.String)">
+            <summary>
+            Method to remove the new line character
+            </summary>
+            <param name="text">Text with new line character</param>
+            <returns>Text without new line character</returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Syncfusion.Pdf.FontStructure.GetHexCode(System.String)" -->
+        <member name="M:Syncfusion.Pdf.FontStructure.ResolveHTMLCharToASCII(System.Int32)">
+            <summary>
+            Method to map the HTML character to equivalent unicode character
+            </summary>
+            <param name="text">The HTML character to decode</param>
+            <returns>The equivalent unicode character</returns>
+        </member>
+        <member name="F:Syncfusion.Pdf.CffGlyphs.m_glyphs">
+            <summary>
+             Variable to hold the glyph string and its glyph shapes 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Pdf.CffGlyphs.m_fontMatrix">
+            <summary>
+             Variable to hold the font matrix
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Pdf.CffGlyphs.m_differenceEncoding">
+            <summary>
+             Variable to hold the character code and character
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Pdf.CffGlyphs.m_renderedPath">
+            <summary>
+             Variable to hold the already cached path
+            </summary>
+        </member>
+        <member name="F:Syncfusion.Pdf.CffGlyphs.m_globalBias">
+            <summary>
+             Variable to hold the globalBias value for glyphs 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.CffGlyphs.Glyphs">
+            <summary>
+            Gets or sets the glyph string and its shapes 
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.CffGlyphs.GlobalBias">
+            <summary>
+            Gets or sets the globalbias
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.CffGlyphs.FontMatrix">
+            <summary>
+            Gets or sets the font matrix
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.CffGlyphs.DifferenceEncoding">
+            <summary>
+            Gets or sets the character code and character
+            </summary>
+        </member>
+        <member name="P:Syncfusion.Pdf.CffGlyphs.RenderedPath">
+            <summary>
+            Gets or sets the already cached path
+            </summary>
+        </member>
+        <member name="M:Syncfusion.Pdf.ASCII85.decode(System.Byte[])">
+            <summary>
+            Decodes the ASCII85 encoded byte[]
+            </summary>
+            <param name="encodedData">encoded byte[]</param>
+            <returns>decoded byte[]</returns>
+        </member>
+    </members>
+</doc>
